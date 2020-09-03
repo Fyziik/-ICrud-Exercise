@@ -20,13 +20,18 @@ public class Main {
         repos.add(DBRepo);
 
         //Do stuff to each repo
+        for (ICrud repository : repos) {
+            // 'create' person using each repo
+            repository.create(p1);
+            repository.create(p2);
+            repository.create(p3);
+            // 'read' person using each repo
+            repository.read();
+            // 'update' person using each repo
 
-        repos.get(0).create(p1);
-        repos.get(0).read(p1);
 
-
-        repos.get(1).create(p1);
-        repos.get(1).read(p1);
+            // 'delete person using each repo
+        }
 
     }
 }

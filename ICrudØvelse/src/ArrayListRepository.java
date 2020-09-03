@@ -33,7 +33,8 @@ public class ArrayListRepository implements ICrud{
     }
 
     @Override
-    public void read(Person person) {
+    public void read() {
+        System.out.println('\n' + "Arraylist Repo: ");
         for (Person tmp : persons) {
             System.out.println(tmp);
         }
