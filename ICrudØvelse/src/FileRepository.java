@@ -19,8 +19,10 @@ public class FileRepository implements ICrud {
     }
 
 
-    @Override // 'old' & 'updated' is actually the same object
+    @Override
     public boolean update(Person old, Person updated) throws IOException {
+        // 'old' & 'updated' is actually the same object, also is basically a conjunction of delete and writeToFile methods
+        // could be done better but I'm lazy
         delete(updated);
         writeToFile(updated);
         return true;
